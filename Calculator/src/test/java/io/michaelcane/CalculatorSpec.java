@@ -25,7 +25,7 @@ public class CalculatorSpec {
          * and adds them together, returning the new value.
          */
         double expectedValue = 5;
-        double actualValue = calculator.sum(2, 9);
+        double actualValue = calculator.sum(2, 3);
         assertEquals("This should evaluate to 5", expectedValue, actualValue, delta);
     }
 
