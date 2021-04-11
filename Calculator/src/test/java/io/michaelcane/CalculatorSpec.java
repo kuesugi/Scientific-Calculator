@@ -27,7 +27,7 @@ public class CalculatorSpec {
         double expectedValue = 5;
         double actualValue = calculator.sum(2, 3);
         assertEquals("This should evaluate to 5", expectedValue, actualValue, delta);
-    }
+    } 
 
     @Test
     public void test$subract() {
