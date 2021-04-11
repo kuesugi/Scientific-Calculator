@@ -4,8 +4,7 @@ pipeline {
     stage('Building') {
       steps {
         tool(name: 'maven', type: 'maven')
-        sh '''cd Calculator
-mvn -Dmaven.test.failure.ignore=true clean package'''
+        sh 'cd Calculator'
       }
     }
 
