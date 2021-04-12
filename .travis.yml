@@ -12,6 +12,7 @@ script:
   - java -version
   - cd Calculator
   - mvn clean verify sonar:sonar -Pcoverage -Dsonar.projectKey=kuesugi_calculator
+  - cd Calculator && ls && cd target && ls
   - mvn -Dtest=CalculatorSpec test
 
 addons:
