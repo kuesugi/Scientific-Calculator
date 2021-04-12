@@ -52,7 +52,7 @@
                 <version>2.19.1</version>
                 <configuration>
                     <testFailureIgnore>true</testFailureIgnore>
-                    <argLine>${argLine} -XX:PermSize=256m -XX:MaxPermSize=1048m</argLine> 
+                    <argLine>${argLine}</argLine> 
                 </configuration>
             </plugin>
         </plugins>
