@@ -1,3 +1,5 @@
+dist: xenial
+
 language: java
 
 jdk: openjdk8
@@ -11,5 +13,10 @@ install: true
 script:
   - java -version
   - cd Calculator
-  - mvn install -B -V
+  - mvn clean verify sonar:sonar -Pcoverage -Dsonar.projectKey=kuesugi_calculator
   - mvn -Dtest=CalculatorSpec test
+
+addons:
+  sonarcloud:
+    organization: 'kuesugi'
+    token: 'e320eb28e1c47b43940386bd4d13b372d5c93f3c'
