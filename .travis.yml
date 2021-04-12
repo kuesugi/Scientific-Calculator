@@ -16,5 +16,5 @@ script:
  # - mvn sonar:sonar -Dsonar.projectKey=kuesugi_calculator
  # - mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent package org.jacoco:jacoco-maven-plugin:report
   - cd target/surefire-reports && ls && cd ../..
-  - mvn sonar:sonar -Dsonar.host.url=https://sonarcloud.io -Dsonar.organization=kuesugi -Dsonar.login=e320eb28e1c47b43940386bd4d13b372d5c93f3c -Dsonar.junit.reportPaths=Calculator/target/surefire-reports/
+  - mvn sonar:sonar -Dsonar.host.url=https://sonarcloud.io -Dsonar.organization=kuesugi -Dsonar.login=e320eb28e1c47b43940386bd4d13b372d5c93f3c -Dsonar.junit.reportPaths=Calculator/target/surefire-reports/TEST-io.michaelcane.CalculatorSpec.xml
  # - mvn -Dtest=CalculatorSpec test
