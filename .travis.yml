@@ -10,6 +10,6 @@ install: true
 
 script:
   - java -version
-  - ls -l
+  - cd Calculator
   - mvn install -B -V
   - mvn -Dtest=CalculatorSpec test
