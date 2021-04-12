@@ -1,3 +1,5 @@
+dist: xenial
+
 language: java
 
 jdk: openjdk8
@@ -11,8 +13,8 @@ install: true
 script:
   - java -version
   - cd Calculator
-  - mvn clean package
-  - mvn sonar:sonar
+  - mvn package
+  - mvn sonar:sonar -Dsonar.projectKey=myorg_myrepo
  # - mvn -Dtest=CalculatorSpec test
 
 addons:
