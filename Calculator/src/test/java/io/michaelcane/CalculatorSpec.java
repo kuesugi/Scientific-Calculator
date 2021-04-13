@@ -27,6 +27,17 @@ public class CalculatorSpec {
         double expectedValue = 5;
         double actualValue = calculator.sum(2, 3);
         assertEquals("This should evaluate to 5", expectedValue, actualValue, delta);
+    } 
+
+    @Test
+    public void test$cube() {
+        /**
+         * This method should take a value (double)
+         * and multiplies it for three times
+         */
+        double expectedValue = 1000;
+        double actualValue = calculator.cube(10);
+        assertEquals("This should evaluate to 1000", expectedValue, actualValue, delta);
     }
 
     @Test

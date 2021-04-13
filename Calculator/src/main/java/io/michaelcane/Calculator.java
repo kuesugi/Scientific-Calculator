@@ -5,6 +5,14 @@ public class Calculator {
 
     Commands commands = new Commands();
 
+    public static double cube(double value1) {
+        /**
+         * This method should take a value (double)
+         * and multiplies it for three times, returning the new value.
+         */
+        return value1 * value1 * value1;
+    }
+
     /**
      * Failed to go over methods that require their return to be degrees or radians.
      * Go back and add functionality.
