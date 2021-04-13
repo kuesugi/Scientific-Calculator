@@ -11,7 +11,6 @@ install: true
 script:
   - java -version
   - cd Calculator
-  - mvn clean install
-  - mvn -Dtest=CalculatorSpec -Dsurefire.printSummary=false -q test
+  - mvn -Dsurefire.printSummary=false -q clean install
   - mvn cobertura:cobertura
   - bash <(curl -s https://codecov.io/bash)
