@@ -19,6 +19,9 @@ script:
   - mvn -Dsurefire.printSummary=false -q clean package
   - mvn cobertura:cobertura
   - bash <(curl -s https://codecov.io/bash)
-  - jdk_switcher use openjdk11
+  - wget https://github.com/sormuras/bach/raw/master/install-jdk.sh
+  - chmod +x $TRAVIS_BUILD_DIR/install-jdk.sh
+  - export JAVA_HOME=$HOME/openjdk11
+  - $TRAVIS_BUILD_DIR/install-jdk.sh -F 11 --target $JAVA_HOME
   - java -version
   - mvn sonar:sonar -Dsonar.host.url=https://sonarcloud.io -Dsonar.organization=kuesugi -Dsonar.login=e320eb28e1c47b43940386bd4d13b372d5c93f3c
