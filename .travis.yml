@@ -12,6 +12,6 @@ script:
   - java -version
   - cd Calculator
   - mvn -Dsurefire.printSummary=false -q clean install
-  - mvn cobertura:cobertura
+  # - mvn cobertura:cobertura
   - bash <(curl -s https://codecov.io/bash)
   - mvn sonar:sonar -Dsonar.host.url=https://sonarcloud.io -Dsonar.organization=kuesugi -Dsonar.login=e320eb28e1c47b43940386bd4d13b372d5c93f3c
