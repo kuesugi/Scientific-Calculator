@@ -1,6 +1,8 @@
 language: java
 
-jdk: openjdk11
+jdk:
+  - openjdk8
+  - openjdk11
 
 cache:
   directories:
@@ -11,7 +13,8 @@ install: true
 script:
   - java -version
   - cd Calculator
-  - mvn -Dsurefire.printSummary=false -q clean install
+  - mvn -Dsurefire.printSummary=false -q clean package
   # - mvn cobertura:cobertura
   - bash <(curl -s https://codecov.io/bash)
+  - export JAVA_HOME=/usr/local/lib/jvm/openjdk11
   - mvn sonar:sonar -Dsonar.host.url=https://sonarcloud.io -Dsonar.organization=kuesugi -Dsonar.login=e320eb28e1c47b43940386bd4d13b372d5c93f3c
